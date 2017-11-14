@@ -10,7 +10,7 @@ public class Student {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	@Size(min=2,max=4)
+	@Size(min=2,max=20)
 	String name;
 	String city;
 	public String getName() {

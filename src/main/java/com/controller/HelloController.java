@@ -30,7 +30,7 @@ public class HelloController {
 	}
 	
 	@RequestMapping(value="/welcome.html", method = RequestMethod.GET)
-	public ModelAndView check(@Valid @ModelAttribute("student") Student student, BindingResult result) {
+	public ModelAndView check(@Valid @ModelAttribute Student student, BindingResult result) {
 		if(result.hasErrors()) {
 			ModelAndView modelandview = new ModelAndView("ErrorPage");
 			return modelandview;
