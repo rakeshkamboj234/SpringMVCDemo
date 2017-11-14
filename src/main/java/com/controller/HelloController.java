@@ -29,7 +29,7 @@ public class HelloController {
 		result.setDisallowedFields(new String[]{"city"});
 	}
 	
-	@RequestMapping(value="/welcome.html", method = RequestMethod.GET)
+	@RequestMapping(value={"/welcome.html","/hello.html"}, method = RequestMethod.GET)
 	public ModelAndView check(@Valid @ModelAttribute Student student, BindingResult result) {
 		if(result.hasErrors()) {
 			ModelAndView modelandview = new ModelAndView("ErrorPage");
