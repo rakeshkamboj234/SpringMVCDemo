@@ -44,12 +44,28 @@
 		    <scope>provided</scope>
 		</dependency>	
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
 		</dependency>
-				
+	    <dependency>
+	        <groupId>org.codehaus.jackson</groupId>
+	        <artifactId>jackson-mapper-asl</artifactId>
+	        <version>1.9.13</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.4.1</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.4.1.1</version>
+	    </dependency> -->
+    	<!-- Json dependency -->
+		
   </dependencies>
   <build>
     <!-- <sourceDirectory>src</sourceDirectory> -->
