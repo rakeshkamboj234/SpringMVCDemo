@@ -1,7 +1,7 @@
 package com.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -10,16 +10,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
 
 import com.controller.Student;
 
-import java.util.*;
 @Controller 
 @RequestMapping("/path")
 public class HelloController { 
@@ -36,6 +32,30 @@ public class HelloController {
 			return modelandview;
 		}
 		ModelAndView modelandview = new ModelAndView("HelloPage");
+		return modelandview;
+	}
+	
+	@RequestMapping(value={"/NullPointerException.html"}, method = RequestMethod.GET)
+	public ModelAndView nullCheck(@Valid @ModelAttribute Student student, BindingResult result) throws Exception {
+		
+		String exceptionCheck = "nullPointer";
+		if(exceptionCheck.equals("nullPointer")){
+			throw new NullPointerException("NullPointerException");
+		}
+		
+		ModelAndView modelandview = new ModelAndView("ExceptionPage");
+		return modelandview;
+	}
+	
+	@RequestMapping(value={"/IOException.html"}, method = RequestMethod.GET)
+	public ModelAndView ioCheck(@Valid @ModelAttribute Student student, BindingResult result) throws Exception {
+		
+		String exceptionCheck = "IOException";
+		if(exceptionCheck.equals("IOException")){
+			throw new IOException("IOException");
+		}
+		
+		ModelAndView modelandview = new ModelAndView("ExceptionPage");
 		return modelandview;
 	}
 	

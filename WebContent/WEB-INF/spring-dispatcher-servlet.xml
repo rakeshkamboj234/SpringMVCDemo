@@ -33,4 +33,13 @@
 	        </property>
 	 </bean>
  
+ 	<!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+        <map>
+            <entry key="IOException"  value="IOException"/>
+            <entry key="NullPointerException"  value="NullPointerException"/>
+        </map>
+        </property>
+    </bean> -->
+     
 </beans>
