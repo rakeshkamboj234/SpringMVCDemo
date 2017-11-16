@@ -29,9 +29,9 @@ public class EmployeeController {
 	@RequestMapping(value = "/employee/{name}/city/{city}",  headers="Accept=*/*", method = RequestMethod.GET , produces = MediaType.APPLICATION_XML_VALUE)
 	public Employee check(@PathVariable("name") String name,@PathVariable("city") String city) {
 		
-		Employee employee2 = new Employee();
-		employee2.setCity(city);
-		employee2.setName(name);
+		Employee employee2 = new Employee(city,name);
+		//employee2.setCity(city);
+		//employee2.setName(name);
 		
 		return employee2;
 		

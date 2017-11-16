@@ -6,9 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 import com.controller.Student;
 
 @RestController
@@ -42,6 +46,19 @@ public class StudentController {
 		arrayList.add(student);
 		
 		return arrayList;
+		
+	}
+	
+	
+	@RequestMapping(value = "/update", method = RequestMethod.PUT, produces="application/json")//, method = RequestMethod.GET, headers="Accept=*/*",  produces="application/json")
+	//@ResponseBody
+	public boolean update(@RequestBody Student student) {
+	
+		/*Student student2 = new Student();
+		student2.setCity(student.getCity());
+		student2.setName(student.getName());*/
+		
+		return true;
 		
 	}
 	

@@ -10,11 +10,16 @@ import javax.xml.bind.annotation.XmlElement;
 //@XmlAccessorType(XmlAccessType.NONE)
 public class Employee { 
 	
-	@XmlAttribute
+	@XmlElement
 	String name;
 	@XmlElement
 	String city;
-	
+	public Employee(){}
+	public Employee(String city, String name) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.city = city;
+	}
 	public String getName() {
 		return name;
 	}
