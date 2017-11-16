@@ -16,12 +16,12 @@
 	 <mvc:annotation-driven />
 	 <context:annotation-config />
 	  
-	 <mvc:interceptors>
+	<!--  <mvc:interceptors>
 	 	<mvc:interceptor>
 		 	<mvc:mapping path="/path/welcome.html"/>
 		 	<bean class="com.controller.DayBasedInterceptor"/>
 	 	</mvc:interceptor>
-	 </mvc:interceptors>
+	 </mvc:interceptors> -->
 	 
 	 <bean id="viewResolver"
 	    	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
